@@ -8,6 +8,7 @@ import tensorflow as tf
 from PIL import Image
 from keras.models import load_model
 from tensorflow.keras.preprocessing import image
+st.markdown(' <h1 style="font-size: 40px; margin-left: 64px; color: rgb(32, 208, 91);">FRUITS CLASSIFICATION</h1>', unsafe_allow_html=True)
 model = load_model('Fruits_Classification_1.model')
 #Xử lí ảnh trước khi phân loại
 categories = ["Apple Red" , "Banana", "Cherry Rainier" ,"Eggplant", "Kiwi", "Lemon", "Mango", "Orange", "Peach", "Raspberry"]
@@ -18,14 +19,7 @@ def prepare(filepath):
   new_array = new_array/255.0
   return new_array.reshape(-1,100,100,1)
 
-#Hiển thị ảnh đã qua xử lí
-#plt.imshow(np.squeeze(prepare(img_test)),cmap='gray')
-#plt.show()
-#print('Hình ảnh đã qua xử lí')
 
-
-
-#+ str(categories[int(np.argmax(prediction))]))
 uploaded_file = st.file_uploader("Choose a file")
 if uploaded_file is not None:
     
@@ -37,7 +31,4 @@ if uploaded_file is not None:
     cv2.imwrite("ima.png",image)
     img_test ="ima.png"
     prediction = model.predict([prepare(img_test)])
-    #print(prediction)
-    #print('Giá trị dự đoán: ' + str(np.argmax(prediction)))
-    #print('')
-    st.write('Tên loại quả: ' + str(categories[int(np.argmax(prediction))]))
+    st.write('Fruit Name: ' + str(categories[int(np.argmax(prediction))]))
