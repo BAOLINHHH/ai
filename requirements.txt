@@ -4,3 +4,4 @@ keras
 matplotlib
 pillow
 opencv-python-headless
+io
