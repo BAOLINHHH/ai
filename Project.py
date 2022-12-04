@@ -8,7 +8,7 @@ import tensorflow as tf
 from PIL import Image
 from keras.models import load_model
 from tensorflow.keras.preprocessing import image
-st.markdown(' <h1 style="font-size: 40px; margin-left: 64px; color: rgb(32, 208, 91);">FRUITS CLASSIFICATION</h1>', unsafe_allow_html=True)
+st.markdown(' <h1 style="font-size: 40px; margin-left: 64px; color: rgb(27, 62, 39);;">FRUITS CLASSIFICATION</h1>', unsafe_allow_html=True)
 model = load_model('Fruits_Classification_1.model')
 #Xử lí ảnh trước khi phân loại
 categories = ["Apple Red" , "Banana", "Cherry Rainier" ,"Eggplant", "Kiwi", "Lemon", "Mango", "Orange", "Peach", "Raspberry"]
