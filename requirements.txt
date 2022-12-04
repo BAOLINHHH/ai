@@ -1,6 +1,6 @@
 numpy
 tensorflow
 keras
-opencv-python
 matplotlib
-pillow 
+pillowS
+opencv-python-headless
