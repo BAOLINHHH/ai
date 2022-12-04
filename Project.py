@@ -9,7 +9,6 @@ from PIL import Image
 from keras.models import load_model
 from tensorflow.keras.preprocessing import image
 model = load_model('Fruits_Classification_1.model')
-img_test = 'testing/1004.jpg'
 #Xử lí ảnh trước khi phân loại
 categories = ["Apple Red" , "Banana", "Cherry Rainier" ,"Eggplant", "Kiwi", "Lemon", "Mango", "Orange", "Peach", "Raspberry"]
 def prepare(filepath):
@@ -24,11 +23,6 @@ def prepare(filepath):
 #plt.show()
 #print('Hình ảnh đã qua xử lí')
 
-
-img1 = image.load_img(img_test, target_size=(100, 100))
-img1_tensor = image.img_to_array(img1)
-img1_tensor = np.expand_dims(img1_tensor, axis=0)
-img1_tensor /= 255.0
 
 
 #+ str(categories[int(np.argmax(prediction))]))
