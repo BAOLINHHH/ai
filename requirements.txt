@@ -2,5 +2,5 @@ numpy
 tensorflow
 keras
 matplotlib
-pillowS
+pillow
 opencv-python-headless
